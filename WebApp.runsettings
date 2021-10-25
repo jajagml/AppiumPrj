@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <!--https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md-->
+  <!--https://github.com/Microsoft/testfx-docs/blob/master/RFCs/004-In-Assembly-Parallel-Execution.md-->
+  <RunConfiguration>
+    <DisableAppDomain>True</DisableAppDomain>
+    <MaxCpuCount>0</MaxCpuCount>
+    <TestSessionTimeout>10800000</TestSessionTimeout>
+  </RunConfiguration>
+  <MSTest>
+    <Parallelize>
+      <Workers>1</Workers>
+      <Scope>ClassLevel</Scope>
+    </Parallelize>
+  </MSTest>
+  <TestRunParameters>
+    <!--Example override with the .runsettings variable  Could be used to run in different environments so multiple app.config's dont need to be used-->
+    <Parameter name="MagenicMaqs:Environment" value="QA" />
+    <Parameter name="AppiumMaqs:MobileHubUrl" value="http://127.0.0.1:4723/wd/hub" />
+    <Parameter name="AppiumMaqs:PlatformName" value="Android" />
+    <Parameter name="AppiumMaqs:PlatformVersion" value="11.0" />
+    <Parameter name="AppiumMaqs:DeviceName" value="emulator-5554" />
+    <Parameter name="AppiumCapsMaqs:browserName" value="chrome" />
+
+    <!--<Parameter name="AppiumMaqs:MobileHubUrl" value="http://hub-cloud.browserstack.com/wd/hub" />-->
+    <!--<Parameter name="AppiumMaqs:PlatformName" value="Android" />-->
+    <!--<Parameter name="AppiumMaqs:PlatformVersion" value="10.0" />-->
+    <!--<Parameter name="AppiumMaqs:DeviceName" value="Android GoogleAPI Emulator" />-->
+    <!--<Parameter name="AppiumCapsMaqs:browserstack.user" value="kevinthomasmedal1" />-->
+    <!--<Parameter name="AppiumCapsMaqs:browserstack.key" value="TbhYDHj5rZXMyCr36HLV" />-->
+    <!--<Parameter name="AppiumCapsMaqs:device" value="Google Pixel 4 XL"/>-->
+    <!--<Parameter name="AppiumCapsMaqs:os_version" value="10.0"/>-->
+    <!--<Parameter name="AppiumCapsMaqs:project" value="Fiserv"/>-->
+    <!--<Parameter name="AppiumCapsMaqs:build" value="Android"/>-->
+    <!--<Parameter name="AppiumCapsMaqs:name" value="KevinTest"/>-->
+    <!--<Parameter name="AppiumCapsMaqs:app" value="bs://76744081ee673e434a11d65cf9a18c091b556d6f"/>-->
+    <!--<Parameter name="AppiumCapsMaqs:appActivity" value="com.magenic.appiumtesting.maqsregistrydemo.LoginPage"/>-->
+    <!--<Parameter name="AppiumCapsMaqs:appPackage" value="com.magenic.appiumtesting.maqsregistrydemo"/>-->
+  </TestRunParameters>
+</RunSettings>
